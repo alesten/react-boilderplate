@@ -1,5 +1,3 @@
-require('file?name=[name].[ext]!../index.html')
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 

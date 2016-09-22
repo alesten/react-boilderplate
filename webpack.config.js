@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry:  './src/app.js',
@@ -40,5 +41,12 @@ module.exports = {
             "~styles": path.resolve(__dirname, 'src', 'styles')
         },
         extensions: ['', '.js', '.scss']
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: "React Boilderplate",
+            inject: 'body',
+            template: 'index.template.ejs',
+        })
+    ]
 };
