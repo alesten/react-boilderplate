@@ -1,7 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-
-import "~styles/vendors.scss"
 
 import Message from "~components/Message"
 
@@ -9,11 +6,10 @@ class App extends React.Component {
     render(){
         return (
             <div className="container">
-                <Message />
+                {this.props.children}
             </div>
         )
     }
 }
 
-ReactDOM.render(<App />,
-    document.getElementById('react-container'))
+export default App

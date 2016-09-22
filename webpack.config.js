@@ -3,7 +3,7 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry:  './src/app.js',
+    entry:  './src/main.js',
     output: {
         path: 'build',
         filename: 'bundle.js'
@@ -38,6 +38,8 @@ module.exports = {
         alias:{
             "~root": path.resolve( __dirname, 'src' ),
             "~components": path.resolve(__dirname, 'src', 'components'),
+            "~constants": path.resolve(__dirname, 'src', 'constants'),
+            "~actions": path.resolve(__dirname, 'src', 'actions'),
             "~styles": path.resolve(__dirname, 'src', 'styles')
         },
         extensions: ['', '.js', '.scss']
